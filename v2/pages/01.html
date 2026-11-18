@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><script data-frfoc-router>(function(){if(window.__frfocR)return;window.__frfocR=1;var R=[["booking", ["записат", "оставить заявку", "запись"]], ["schedule", ["расписани"]], ["prices", ["цены", "стоимост"]], ["object", ["наши объекты", "объект", "артемид"]], ["service", ["подробнее", "обучение плаванию", "страница услуги"]], ["catalog", ["услуги", "выбрать занятие", "найти занятия", "направлени", "каталог"]], ["home", ["главная", "фрунзенский фоц"]]];
+function key(t){t=(t||'').toLowerCase().replace(/\s+/g,' ').trim();if(!t||t.length>60)return null;for(var i=0;i<R.length;i++)for(var j=0;j<R[i][1].length;j++)if(t.indexOf(R[i][1][j])>=0)return R[i][0];return null}
+window.addEventListener('click',function(e){var el=e.target.closest&&e.target.closest('a,button,[role=button]');if(!el)return;
+if(el.tagName==='BUTTON'&&(el.type==='submit'||el.closest('form')))return;var k=key(el.innerText||el.textContent);
+if(!k&&el.tagName==='A'&&el.querySelector('svg,img')&&/фоц/i.test(el.textContent))k='home';if(!k)return;e.preventDefault();e.stopPropagation();
+try{parent.postMessage({frfocGo:k},'*')}catch(_){}},true);})();</script>
   <meta charset="utf-8">
   <title>Главная — Фрунзенский ФОЦ</title>
   <style>
