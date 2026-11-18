@@ -1,0 +1,9 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Вариант 3 — frfoc.by — дизайн сайта</title>
+<style>*{box-sizing:border-box}body{margin:0;font:14px -apple-system,sans-serif;background:#e9e8e4}
+nav{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:8px 12px;background:#1f1e1d}
+nav a{color:#fff;text-decoration:none;margin-right:10px;font-weight:600}nav button{border:0;border-radius:8px;padding:7px 12px;background:#3a3937;color:#eee;cursor:pointer;font-size:13px}
+nav button.on{background:#fff;color:#111}#wrap{display:flex;justify-content:center}iframe{border:0;background:#fff;height:calc(100vh - 50px);width:100%;display:block}</style></head>
+<body><nav><a href="../">← Все варианты</a><b style="color:#aaa;margin-right:10px">Вариант 3</b><button data-src="pages/01.html" data-w="1440">Главная — компьютер</button><button data-src="pages/02.html" data-w="390">Главная — телефон</button><button data-src="pages/03.html" data-w="390">Расписание — телефон</button><button data-src="pages/04.html" data-w="1440">Каталог услуг</button><button data-src="pages/05.html" data-w="1440">Услуга — Обучение плаванию</button><button data-src="pages/06.html" data-w="1440">Расписание</button><button data-src="pages/07.html" data-w="1440">Цены</button><button data-src="pages/08.html" data-w="1440">Объект — Артемида</button><button data-src="pages/09.html" data-w="1440">Запись и результаты</button></nav><div id="wrap"><iframe id="f"></iframe></div>
+<script>const f=document.getElementById('f'),bs=[...document.querySelectorAll('nav button')];
+function go(b){bs.forEach(x=>x.classList.toggle('on',x===b));f.src=b.dataset.src;const w=+b.dataset.w;f.style.maxWidth=w<800?w+'px':'100%';location.hash=bs.indexOf(b)+1}
+bs.forEach(b=>b.onclick=()=>go(b));go(bs[(+location.hash.slice(1)||1)-1]||bs[0]);</script></body></html>
